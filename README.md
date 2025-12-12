@@ -1,75 +1,53 @@
-# Deadlock Prevention & Recovery Toolkit (C++)
+deadlock-prevention-toolkit
+OS Project: Deadlock Prevention and Recovery Toolkit using C++
 
-This project implements a complete Operating System simulation for **Deadlock Prevention, Detection, and Recovery**.  
-It includes **Banker's Algorithm**, **Resource Allocation Graph (RAG) Deadlock Detection**, and **Process Termination Recovery**.
+This project is a simple but complete toolkit that demonstrates how operating systems handle deadlocks.
+It includes:
 
-This repository is created as part of the Operating Systems project.
+Deadlock prevention
+Deadlock detection
+Deadlock recovery
+A working implementation of Banker’s Algorithm
+A basic Resource Allocation Graph (RAG) based deadlock check
+A small menu-driven simulation program in C++
+The goal of this project is to help understand how resource allocation works inside an OS and how the system avoids unsafe situations.
+📌 What This Project Can Do
+✔ Check if the system is in a safe state
+✔ Compute the Need matrix
+✔ Allow users to request additional resources
+✔ Approve or reject resource requests based on Banker's Algorithm
+✔ Detect deadlocks using a cycle-checking technique
+✔ Recover from deadlocks by terminating a process
+✔ Simulate multiple scenarios interactively
 
----
-
-## 📘 Features
-
-✔ **Safe State Check** using Banker's Algorithm  
-✔ **Need Matrix Calculation**  
-✔ **Resource Request Algorithm**  
-✔ **Rollback if Unsafe**  
-✔ **Deadlock Detection using RAG cycle detection**  
-✔ **Deadlock Recovery by terminating a process**  
-✔ **Simulation of multiple operations**  
-✔ Fully modular C++ implementation  
-
----
-
-## 📁 Repository Structure
-
-```
+📁 Project Structure
 deadlock-prevention-toolkit/
 │
 ├── src/
-│   └── deadlock.cpp
+│   └── deadlock.cpp        # Main source file
 │
 ├── docs/
-│   ├── Report.md
-│   ├── Flowchart.png
-│   └── Viva_Questions.md
+│   ├── Report.md           # Full project report
+│   ├── Flowchart.png       # Flowchart for the algorithm
 │
-├── README.md
-└── .githubignore
-```
+└── README.md
+🔧 How to Compile and Run
+Open your terminal and type:
 
----
-
-## 🔧 How to Compile
-
-Run this command:
-
-```bash
+Compile
 g++ src/deadlock.cpp -o deadlock
-```
-
----
-
-## ▶️ How to Run
-
-```bash
+Run
 ./deadlock
-```
+🧪 Input Format (Simple Example)
+The program will ask for:
 
----
+Number of processes
+Number of resources
+MAX matrix
+ALLOCATION matrix
+AVAILABLE vector
+Example input:
 
-## 📥 Input Format
-
-You need to enter:
-
-1️⃣ Number of processes  
-2️⃣ Number of resources  
-3️⃣ **MAX matrix**  
-4️⃣ **ALLOCATION matrix**  
-5️⃣ **AVAILABLE vector**
-
-Example:
-
-```
 3 3
 7 5 3
 3 2 2
@@ -78,60 +56,39 @@ Example:
 2 0 0
 3 0 2
 3 3 2
-```
+🎮 Program Menu
+When you run the program, you will see:
 
----
-
-## 🖥 Menu Options in Program
-
-The program shows this menu:
-
-```
 1. Check Safe State
 2. Request Resources
 3. Detect Deadlock
 4. Exit
-```
+You can repeatedly choose different options to test scenarios.
 
----
-
-## 🧠 Algorithms Used
-
-### ✔ Banker's Algorithm
+💡 Algorithms Used
+1. Banker’s Algorithm
 Used for:
-- Safe state check  
-- Granting or denying requests  
 
-### ✔ RAG (Resource Allocation Graph)
+Checking safe states
+Verifying if a resource request is safe
+2. Resource Allocation Graph (RAG)
 Used for:
-- Detecting cycles  
-- Identifying deadlocked processes  
 
-### ✔ Deadlock Recovery
-Method used:
-- Terminating a selected process (P0 in this simulation)  
-- Releasing its resources  
+Detecting cycles
+Finding if any process is part of a deadlock
+3. Deadlock Recovery
+When a deadlock is detected:
 
----
+The program forces a recovery by terminating a selected process
+Freed resources are returned to the system
+📄 Documentation
+The complete project report is available in:
 
-## 📄 Documentation
-
-All project documentation is inside:
-
-```
 docs/Report.md
-```
+It includes diagrams, explanation, advantages, limitations, and module details.
 
----
-
-## 👤 Author
-
-**Riya Verma**
-Roll No: RK24PRA10
-Operating Systems – Project Submission  
-
----
-
-## ⭐ Support
-
-Feel free to ⭐ star this repository if it helped you!
+👩‍💻 Author
+Riya Verma
+Roll No: RK24PRA10 B.Tech CSE - Operating Systems Project
+⭐ If This Helped You
+Give a star ⭐ to this repository — it motivates future updates!
