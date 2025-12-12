@@ -126,9 +126,7 @@ docs/Report.md
 
 ## 👤 Author
 
-**Vani Bhardwaj**
 **Riya Verma**
-Roll No: RK24PRA11 
 Roll No: RK24PRA10
 Operating Systems – Project Submission  
 
